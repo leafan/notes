@@ -6,6 +6,8 @@
 - pos位置里则是记录某个位置常见的特征向量(长度同上, 如768/1024), 表示这个位置如 第一个位置一般为 主语
 - 而 attention自注意力 则表示 tok_emb+pos_emb 生成特征向量后的关系(q k v shape都是768*768), 也就是可以理解为: sequence序列里 每个单词之间的相互关系学习
 
+供学习的代码可参考: [myGPT实现](https://github.com/leafan/myGPT)
+
 ## Transformer 基础实现
 
 ![transformer网络图](https://i-blog.csdnimg.cn/blog_migrate/394142aa34b101d092b29c351f480335.png)

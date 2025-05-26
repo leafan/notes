@@ -17,16 +17,16 @@
 
 ## ResNet(Residual Network)  
 何恺明团队2015年提出的残差网络，核心创新包括：
-1. 残差块（Residual Block）：$y = x + F(x)$ 的跳跃连接
-2. 瓶颈结构（Bottleneck）：1×1卷积降维提升效率
+1. 残差块(Residual Block)：y = x + F(x) 的跳跃连接
+2. 瓶颈结构(Bottleneck)：1×1卷积降维提升效率
 3. 大幅减少了梯度消失问题, 支持超深层网络
 
-在ImageNet上Top-5错误率3.57%，成为后续模型的基础架构, 尤其是其跳跃连接基本是模型必备.
+在ImageNet上Top-5错误率3.57%, 成为后续模型的基础架构, 尤其是其跳跃连接基本是模型必备
 
 参考图: [ResNet结构](https://upload.wikimedia.org/wikipedia/commons/b/ba/ResBlock.png)
 
 ## DarkNet  
-Joseph Redmon开发的轻量级神经网络框架，核心应用为YOLO系列算法，支持实时检测（如自动驾驶、安防）。特点包括跨平台兼容性、低延迟（如YOLOv3达22ms/帧）及模块化设计
+Joseph Redmon开发的轻量级神经网络框架, 核心应用为YOLO系列算法, 支持实时检测(如自动驾驶、安防). 特点包括跨平台兼容性、低延迟(如YOLOv3达22ms/帧)及模块化设计
 
 他是首个将 **区域推荐\分类\检测问题** 同时通过神经网络解决, 而不是需要多次学习/训练, 也可能因此取名为darknet, 意为黑箱网络, 直接使用即可
 
