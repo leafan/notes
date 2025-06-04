@@ -525,13 +525,10 @@ def call(self, inputs, training=False, mask=None):
 参考: [MOAT头](../../common/moat.md)
 
 ## 修改要点
-#### <font color='red'>输出头</font>
 
-需要研究yolo的输出头与损失函数, 然后移植过来并测试
-TODO
+需要研究yolo的输出头与损失函数, 然后移植过来并测试, 参考: [moat验证](https://github.com/YoctoVision/deeplab2)
 
-#### <font color='red'>损失函数</font>
-TODO
+yolo的loss函数修改可参考: [loss函数](../../common/loss.md)中关于yolo损失函数的介绍
 
 
 ## 运行测试
@@ -577,7 +574,7 @@ else:
 
 # 无分类头输出日志:
 
-# 维度: (batch_size, height, width, channels)
+# 维度: (batch_size, height, width, channels) height=width=256
 # channels为其每一阶段的 特征向量
 stage1: (1, 128, 128, 80)
 res1: (1, 128, 128, 80)
@@ -594,10 +591,27 @@ res4: (1, 16, 16, 320)
 stage5: (1, 8, 8, 640)
 res5: (1, 8, 8, 640)
 
+# 如果输入维度修改到 1024/1024(256的4倍), 则结果维度也会对应大4倍(特征向量不变):
+stage1: (1, 512, 512, 80)
+res1: (1, 512, 512, 80)
+
+stage2: (1, 256, 256, 80)
+res2: (1, 256, 256, 80)
+
+stage3: (1, 128, 128, 160)
+res3: (1, 128, 128, 160)
+
+stage4: (1, 64, 64, 320)
+res4: (1, 64, 64, 320)
+
+stage5: (1, 32, 32, 640)
+res5: (1, 32, 32, 640)
+
 # 如有分类头 输出日志:
 predictions shape:  (1, 1000)
 最大值: [3.263272] # 分类置信度(最高的)
 最大值索引: [791]   # classnum为1000, 这是对输入图片运算后得到的分类id
+
 ```
 
 

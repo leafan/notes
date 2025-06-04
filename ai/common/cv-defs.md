@@ -25,7 +25,7 @@
 
 参考图: [ResNet结构](https://upload.wikimedia.org/wikipedia/commons/b/ba/ResBlock.png)
 
-## DarkNet  
+## DarkNet
 Joseph Redmon开发的轻量级神经网络框架, 核心应用为YOLO系列算法, 支持实时检测(如自动驾驶、安防). 特点包括跨平台兼容性、低延迟(如YOLOv3达22ms/帧)及模块化设计
 
 他是首个将 **区域推荐\分类\检测问题** 同时通过神经网络解决, 而不是需要多次学习/训练, 也可能因此取名为darknet, 意为黑箱网络, 直接使用即可
