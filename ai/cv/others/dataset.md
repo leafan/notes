@@ -194,6 +194,9 @@ ground_truth/
 #### <font color='red'>使用格式</font>
 
 经过初步讨论, 决定使用: **yolo 格式 [ classid, x y w h ]** 作为 训练/评估 的数据集格式.
+classid: box 类别
+x,y: 边界框中心点的水平/垂直坐标, 注意: 不是左上角或右下角, 是中心点
+w,h: 表示边界框的完整宽度和高度, 注意: 不是一半, 是完整高度
 
 ## 引用
 1. https://blog.csdn.net/qq_41742361/article/details/108352833 —— 数据集汇总文章

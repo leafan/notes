@@ -11,7 +11,7 @@ MOAT是一种结合移动卷积（MBConv）和注意力机制的视觉骨干网�
 
 ![moat architecture](assets/moat_architecture.png)
 
-
+---
 
 ### 优势
 1. ​高效融合MBConv与注意力​：通过替换MLP并调整模块顺序，增强局部与全局特征交互，提升模型性能
@@ -32,6 +32,7 @@ MOAT是一种结合移动卷积（MBConv）和注意力机制的视觉骨干网�
 | ​**ViT**​    | 必须切割为固定大小块    | 分块+位置编码插值         | 差（全局注意力计算成本高） |
 | ​**ConvNeXt**| 建议降采样至512×512     | 分层卷积堆叠              | 中等（静态感受野限制）     |
 
+---
 
 ## 实现细节
 
@@ -524,6 +525,8 @@ def call(self, inputs, training=False, mask=None):
 
 参考: [MOAT头](../../common/moat.md)
 
+---
+
 ## 修改要点
 
 需要研究yolo的输出头与损失函数, 然后移植过来并测试, 参考: [moat验证](https://github.com/YoctoVision/deeplab2)
@@ -614,6 +617,7 @@ predictions shape:  (1, 1000)
 
 ```
 
+---
 
 ## 插曲
 在原作者讲解paper结束后的QA环节, 有人提问: 缺陷检测适合什么模型?
