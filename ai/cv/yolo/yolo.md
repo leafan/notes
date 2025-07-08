@@ -18,7 +18,9 @@ yolo网络架构主要包括:
 
 
 ### yolov8 架构图
-[yolov8架构图](image.png)
+
+[yolov8架构图](assets/yolov8_architecture.png)
+
 
 ### yolov1维度流转图(darknet架构)
 ![darknet架构图](assets/darknet_vary_shape.png)
@@ -30,7 +32,6 @@ yolov3是yolo系列较为经典的一个版本, yolov4-v8的架构基本都沿�
 ### 初始化
 
 ```python
-
 # 直接命名為 Darknet 了:)
 class Darknet(nn.Module):
     """YOLOv3 object detection model"""

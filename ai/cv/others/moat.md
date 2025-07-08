@@ -529,7 +529,7 @@ def call(self, inputs, training=False, mask=None):
 
 ## 修改要点
 
-需要研究yolo的输出头与损失函数, 然后移植过来并测试, 参考: [moat验证](https://github.com/YoctoVision/deeplab2)
+需要研究yolo的输出头与损失函数, 然后移植过来并测试, 参考: [moat yolo_head 验证](https://github.com/YoctoVision/deeplab2/blob/main/README.md)
 
 yolo的loss函数修改可参考: [loss函数](../../common/loss.md)中关于yolo损失函数的介绍
 
